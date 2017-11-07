@@ -5,7 +5,7 @@ The etcd-task-gen tool generates an ECS task definition for deploying a static e
 
 ## Usage:
 
-`$ python etcd.py <ECS_CLUSTER_NAME>`
+`$ python etcd.py`
 
 ## Example: 
 
