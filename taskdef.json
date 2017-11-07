@@ -1,0 +1,20 @@
+{
+    "networkMode": null,
+    "placementConstraints": [],
+    "containerDefinitions": [
+	    {
+            "memory": null,
+            "disableNetworking": false,
+            "portMappings": [],
+            "essential": true,
+            "mountPoints": [],
+            "name": null,
+            "image": null,
+            "command": [],
+            "cpu": null,
+            "privileged": true
+        }
+    ],
+    "volumes": [],
+    "family": null
+}
