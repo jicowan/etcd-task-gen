@@ -3,6 +3,14 @@ Generate an ECS task definition for running etcd in your cluster
 
 The etcd-task-gen tool generates an ECS task definition for deploying a static etcd node in your ECS cluster. The definition can be used as a starting point for creating your own task definitions a production etcd cluster.
 
+# etcd
+etcd is a distributed key value store that provides a reliable way to store data across a cluster of machines. It’s open-source and available on GitHub. etcd gracefully handles leader elections during network partitions and will tolerate machine failure, including the leader.
+
+Learn more: https://coreos.com/etcd/docs/latest/getting-started-with-etcd.html
+
+## Using this Task Definition
+This task definition pulls the maintained etcd image, quay.io/coreos/etcd:v2.3.8.
+
 ## Usage:
 
 `$ python etcd.py`
