@@ -82,3 +82,25 @@ The etcd-task-gen tool generates an ECS task definition for deploying a static e
     ]
 }
 ```
+
+#### ECS CLI Commands
+`aws ecs register-task-definition --cli-input-json file://<path_to_json_file>/nginx.json`
+
+## More Info
+#### What is a Task Definition?
+A task definition is required to run Docker containers in Amazon ECS. Some of the parameters you can specify in a task definition include:
+
+* Which Docker images to use with the containers in your task.
+* How much CPU and memory to use with each container.
+* The Docker networking mode to use for the containers in your task.
+
+Please see the [Amazon ECS Documentation](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definitions.html) for more information on writing and running Task Definitions.
+
+#### About Amazon ECS
+Amazon EC2 Container Service (Amazon ECS) is a container management service that supports Docker containers and allows you to easily run applications on a managed cluster of Amazon EC2 instances. Amazon ECS eliminates the need for you to install, operate, and scale your own cluster management infrastructure. Learn more [here](https://aws.amazon.com/ecs).
+
+#### Getting Help
+* [Amazon ECS Documentation](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html)
+* [Amazon ECS Developer Forum](https://forums.aws.amazon.com/forum.jspa?forumID=187)
+* [Stack Overflow](https://stackoverflow.com/questions/tagged/amazon-ecs)
+* [AWS Support](https://aws.amazon.com/premiumsupport/)
