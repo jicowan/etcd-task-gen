@@ -2,9 +2,13 @@ import boto3
 import json
 import datetime
 import jmespath
+import requests
 from pick import pick
 ecs_client = boto3.client('ecs')
 ec2_client = boto3.client('ec2')
+etcd_discovery_service = 'https://discovery.etcd.io/new?size=3'
+#creates a discovery url for creating a 3 node etcd cluster
+discovery_url = requests.get(etcd_discovery_service).text
 
 def datetime_handler(x):
     '''Convert datetime into isoformat'''
@@ -80,7 +84,8 @@ def create_task_definition(host_ip):
             '-listen-peer-urls', 'http://0.0.0.0:2380', \
             '-initial-cluster-token', 'etcd-cluster-1', \
             '-initial-cluster', 'etcd0=http://' + host_ip + ':2380', \
-            '-initial-cluster-state', 'new']
+            '-initial-cluster-state', 'new'] # to use the discovery service add , \ to this line and uncomment the next line
+            #'-discovery', discovery_url]
         taskdef['placementConstraints'] = {
             'expression': 'attribute:name == etcd0',
             'type':'memberOf'
