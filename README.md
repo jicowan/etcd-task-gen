@@ -92,7 +92,7 @@ This task definition pulls the maintained etcd image, quay.io/coreos/etcd:v2.3.8
 ```
 
 #### ECS CLI Commands
-`aws ecs register-task-definition --cli-input-json file://<path_to_json_file>/nginx.json`
+`aws ecs register-task-definition --cli-input-json file://<path_to_json_file>/etcd-taskdef.json`
 
 ## More Info
 #### What is a Task Definition?
